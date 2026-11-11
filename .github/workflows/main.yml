@@ -14,7 +14,6 @@ jobs:
 
       - name: Build Unsigned App
         run: |
-          sed -n '175,205p' RSDKv3/RetroEngine.hpp
           mkdir -p dependencies/ios && touch dependencies/ios/Data.rsdk
           ln -sfn RSDKv3 SonicCDDecomp
           touch RSDKv3/Video.cpp
@@ -28,7 +27,7 @@ jobs:
             -configuration Release \
             -sdk iphoneos \
             -derivedDataPath build \
-            GCC_PREPROCESSOR_DEFINITIONS='$(inherited) RETRO_USING_SDL2=1 RETRO_USE_GLES2=1 RETRO_RENDER_DEVICE=RETRO_RENDER_DEVICE_GLES2 RETRO_MOD_LOADER=1 RETRO_USE_MOD_LOADER=1' \
+            GCC_PREPROCESSOR_DEFINITIONS='$(inherited) RETRO_PLATFORM=RETRO_iOS RETRO_USING_SDL2=1 RETRO_MOD_LOADER=1 RETRO_USE_MOD_LOADER=1' \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" | grep -E "error:|BUILD SUCCEEDED|BUILD FAILED" -A 3
