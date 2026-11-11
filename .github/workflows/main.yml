@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-15-intel
+    runs-on: macos-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -14,8 +14,8 @@ jobs:
 
       - name: Build Unsigned App
         run: |
-          mkdir -p dependencies/ios && touch dependencies/ios/Data.rsdk  
-        xcodebuild -project "RSDKv3 ios.xcodeproj" \
+          mkdir -p dependencies/ios && touch dependencies/ios/Data.rsdk
+          xcodebuild -project "RSDKv3 ios.xcodeproj" \
             -scheme "RSDKv3" \
             -configuration Release \
             -sdk iphoneos \
@@ -28,8 +28,8 @@ jobs:
         run: |
           mkdir -p Payload
           cp -r build/Build/Products/Release-iphoneos/*.app Payload/
-         rm -f Payload/*.app/Data.rsdk
-         zip -r RSDKv3-iOS.ipa Payload
+          rm -f Payload/*.app/Data.rsdk
+          zip -r RSDKv3-iOS.ipa Payload
 
       - name: Upload IPA Artifact
         uses: actions/upload-artifact@v4
