@@ -5,10 +5,10 @@
 	};
 	objectVersion = 50;
 	objects = {
-
-/* Begin PBXBuildFile section */
-		C9065CCE25A3E2FF00382B94 /* cocoaHelpers.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9065CCD25A3E2FF00382B94 /* cocoaHelpers.mm */; };
-		C9065CD125A3E50100382B94 /* Data.rsdk in Resources */ = {isa = PBXBuildFile; fileRef = C9065CD025A3E50000382B94 /* Data.rsdk */; };
+/* Begin PBXBuildFile section */	
+C9065CCE25A3E2FF00382B94 /* cocoaHelpers.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9065CCD25A3E2FF00382B94 /* cocoaHelpers.mm */; };
+A1B2C3D4E5F60718293A4B5C /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60718293A4B5D /* tinyxml2.cpp */; };
+C9065CD125A3E50100382B94 /* Data.rsdk in Resources */ = {isa = PBXBuildFile; fileRef = C9065CD025A3E50000382B94 /* Data.rsdk */; };
 		C9065CD325A425D100382B94 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9065C8C25A3D47B00382B94 /* SDL2.framework */; };
 		C9065CD425A425D200382B94 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9065C8C25A3D47B00382B94 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9065CD625A425E000382B94 /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9065C8A25A3D47B00382B94 /* Ogg.framework */; };
@@ -64,7 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C9065C8925A3D47B00382B94 /* Theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Theora.framework; path = dependencies/ios/Theora.framework; sourceTree = "<group>"; };
+A1B2C3D4E5F60718293A4B5D /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml2.cpp; path = dependencies/tinyxml2/tinyxml2.cpp; sourceTree = "<group>"; };
+C9065C8925A3D47B00382B94 /* Theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Theora.framework; path = dependencies/ios/Theora.framework; sourceTree = "<group>"; };
 		C9065C8A25A3D47B00382B94 /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = dependencies/ios/Ogg.framework; sourceTree = "<group>"; };
 		C9065C8B25A3D47B00382B94 /* Vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vorbis.framework; path = dependencies/ios/Vorbis.framework; sourceTree = "<group>"; };
 		C9065C8C25A3D47B00382B94 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = dependencies/ios/SDL2.framework; sourceTree = "<group>"; };
@@ -338,7 +339,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C959D5A625A0409F0001CA1C /* Resources */ = {
+C959D5A625A0409F0001CA1C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,12 +352,13 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXSourcesBuildPhase section */
-		C959D5A425A0409F0001CA1C /* Sources */ = {
+/* Begin PBXSourcesBuildPhase section */	
+C959D5A425A0409F0001CA1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C959D5F525A0415D0001CA1C /* Script.cpp in Sources */,
+A1B2C3D4E5F60718293A4B5C /* tinyxml2.cpp in Sources */,				
+C959D5F525A0415D0001CA1C /* Script.cpp in Sources */,
 				C959D62A25A2E5250001CA1C /* theoraplay.c in Sources */,
 				C959D5EB25A0415D0001CA1C /* Scene.cpp in Sources */,
 				C959D5F725A0415D0001CA1C /* Player.cpp in Sources */,
