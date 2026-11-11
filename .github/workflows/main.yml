@@ -17,6 +17,7 @@ jobs:
           mkdir -p dependencies/ios && touch dependencies/ios/Data.rsdk
           ln -sfn RSDKv3 SonicCDDecomp
           touch RSDKv3/Video.cpp
+          echo "" > dependencies/mac/cocoaHelpers.mm
           if [ -d "dependencies/all/tinyxml2" ]; then
             ln -sfn all/tinyxml2 dependencies/tinyxml2
           fi
