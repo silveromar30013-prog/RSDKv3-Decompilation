@@ -17,6 +17,10 @@ jobs:
           mkdir -p dependencies/ios && touch dependencies/ios/Data.rsdk
           ln -sfn RSDKv3 SonicCDDecomp
           touch RSDKv3/Video.cpp
+          if [ -d "dependencies/all/tinyxml2" ]; then
+            ln -sfn all/tinyxml2 dependencies/tinyxml2
+          fi
+          set -o pipefail
           xcodebuild -project "RSDKv3 ios.xcodeproj" \
             -scheme "RSDKv3" \
             -configuration Release \
@@ -24,7 +28,7 @@ jobs:
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY=""
+            CODE_SIGN_IDENTITY="" | grep -E "error:|BUILD SUCCEEDED|BUILD FAILED" -A 3
 
       - name: Package IPA
         run: |
